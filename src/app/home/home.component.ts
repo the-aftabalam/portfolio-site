@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
   }
 
   downloadResume() {
-    const resumeUrl = 'assets/your-resume.pdf'; // URL of your resume
+    const resumeUrl = 'https://drive.google.com/file/d/1oLfCmaVTw99jCzBHh-NPNvmKYalDmk2q/view?usp=sharing'; // URL of your resume
     const link = document.createElement('a');
     link.href = resumeUrl;
     link.download = 'Your_Resume.pdf';
@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit {
   }
   
   viewResume() {
-    const resumeUrl = 'assets/your-resume.pdf'; // URL of your resume
+    const resumeUrl = 'https://drive.google.com/file/d/1oLfCmaVTw99jCzBHh-NPNvmKYalDmk2q/view?usp=sharing'; // URL of your resume
     window.open(resumeUrl, '_blank');
   }
   
