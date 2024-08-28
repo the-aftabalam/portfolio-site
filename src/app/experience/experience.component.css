@@ -1,0 +1,91 @@
+.experience-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%; /* Ensure container takes full width */
+}
+
+.experience-card {
+  width: 100%;
+  max-width: 1200px; /* Optional: Max width to avoid overly wide cards */
+  padding: 20px;
+  background: #1e1e1e; /* Dark background for the card */
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  margin: 0 auto; /* Center card horizontally */
+
+  &:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+}
+
+.top-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.left-section {
+  flex: 0 0 150px; /* Adjusted width for logo */
+  display: flex;
+  justify-content: center;
+}
+
+.company-logo {
+  width: 200px; /* Increased size */
+  height: 100px; /* Increased size */
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.right-section {
+  flex-grow: 1;
+  text-align: right;
+
+  .position-role {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .team-name {
+    font-size: 1.2rem;
+    color: #ff4081; /* Accent color */
+    margin-bottom: 5px;
+  }
+
+  .date-range {
+    font-size: 1rem;
+    color: #666;
+  }
+}
+
+.more-details {
+  margin-top: 15px;
+
+  p {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+
+  mat-icon {
+    margin-right: 8px;
+    color: #ff4081; /* Accent color */
+  }
+
+  ul {
+    margin-top: 5px;
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+}

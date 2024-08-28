@@ -1,0 +1,26 @@
+<div class="projects-container">
+  <mat-card class="project-card" *ngFor="let project of projects">
+    <div class="card-content">
+      <!-- Top Section: Image and Title -->
+      <div class="top-section">
+        <!-- Left section: Project Image -->
+        <!-- Right section: Title and Tech Stack -->
+        <div class="right-section">
+          <div class="title">{{ project.title }}</div>
+          <div class="tech-stack">
+            <span *ngFor="let tech of project.techStack">{{ tech }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Details Section: Description and Buttons -->
+      <div class="details-section">
+        <p class="description">{{ project.description }}</p>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="viewProject(project.link)">View</button>
+          <button mat-stroked-button color="accent" (click)="viewSourceCode(project.source)">Source Code</button>
+        </mat-card-actions>
+      </div>
+    </div>
+  </mat-card>
+</div>

@@ -1,0 +1,28 @@
+<div class="education-container">
+    <mat-card class="education-card" *ngFor="let education of educationList">
+      <div class="card-content">
+        <!-- Top Section: Institution and Degree -->
+        <div class="top-section">
+          <!-- Left section: Institution Logo -->
+        
+  
+          <!-- Right section: Degree and Date Range -->
+          <div class="right-section">
+            <div class="degree">{{ education.degree }}</div>
+            <div class="date-range">{{ education.dateRange }}</div>
+          </div>
+        </div>
+  
+        <!-- Details Section -->
+        <div class="details-section">
+          <p><strong>Institution:</strong> {{ education.institution }}</p>
+          <p><strong>Location:</strong> {{ education.location }}</p>
+          <p><strong>Achievements:</strong></p>
+          <ul>
+            <li *ngFor="let achievement of education.achievements">{{ achievement }}</li>
+          </ul>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+  

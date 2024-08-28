@@ -1,0 +1,23 @@
+<div class="achievements-container">
+    <mat-card class="achievement-card" *ngFor="let achievement of achievements; let i = index">
+      <div class="card-content">
+        <!-- Top Section: Title and Date Range -->
+        <div class="top-section">
+          <div class="title">{{ achievement.title }}</div>
+          <div class="date-range">{{ achievement.dateRange }}</div>
+        </div>
+  
+        <!-- Details Section -->
+        <div class="details-section">
+          <p><strong>Description:</strong> {{ achievement.description }}</p>
+          <button mat-raised-button color="accent" (click)="toggleImage(i)">
+            {{ imageVisible[i] ? 'Hide Image' : 'Show Image' }}
+          </button>
+          <div class="image-container" *ngIf="imageVisible[i]">
+            <img [src]="achievement.image" alt="{{ achievement.title }}" />
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+  

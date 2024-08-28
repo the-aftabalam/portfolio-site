@@ -1,1 +1,86 @@
-/* You can add global styles to this file, and also import other style files */
+/* Import Angular Material Theme */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* Define Color Variables */
+:root {
+  --primary-color: #007bff; /* Primary color */
+  --secondary-color: #6c757d; /* Secondary color */
+  --background-color: #f8f9fa; /* Background color */
+  --text-color: #212529; /* Text color */
+  --header-color: #343a40; /* Header color */
+  --footer-color: #343a40; /* Footer color */
+}
+
+/* Global Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Header Styles */
+header {
+  background-color: var(--header-color);
+  color: #fff; /* White text on header */
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--footer-color);
+  color: #fff; /* White text on footer */
+}
+
+/* Anchor Link Styles */
+a {
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* Navigation Styles */
+nav {
+  background-color: var(--header-color);
+}
+
+nav a {
+  color: #fff; /* White text for navigation links */
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+/* Button Styles */
+button {
+  background-color: var(--primary-color);
+  color: #fff; /* White text on buttons */
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Card Styles */
+.card {
+  background-color: #fff; /* White background for cards */
+  border: 1px solid var(--secondary-color);
+}
+
+/* Section Styles */
+.section {
+  background-color: var(--background-color);
+  padding: 20px;
+}
+
+/* Form Styles */
+input, textarea {
+  border: 1px solid var(--secondary-color);
+}
+
+input:focus, textarea:focus {
+  border-color: var(--primary-color);
+}

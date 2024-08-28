@@ -1,0 +1,33 @@
+<div class="experience-container">
+  <mat-card class="experience-card">
+    <div class="card-content">
+      <!-- Top Section: Company logo and role/team/date in parallel -->
+      <div class="top-section">
+        <!-- Left section: Company logo -->
+        <div class="left-section">
+          <img [src]="experience.logo" alt="Company Logo" class="company-logo">
+        </div>
+
+        <!-- Right section: Position, Team, and Date Range -->
+        <div class="right-section">
+          <div class="position-role">{{ experience.role }}</div>
+          <div class="team-name">{{ experience.team }}</div>
+          <div class="date-range">{{ experience.dateRange }}</div>
+        </div>
+      </div>
+
+      <!-- More details that reveal on hover -->
+      <div class="more-details">
+        <p><mat-icon>location_on</mat-icon><strong> Location:</strong> {{ experience.location }}</p>
+        <p><mat-icon>tasks</mat-icon><strong> Key Responsibilities:</strong></p>
+        <ul>
+          <li *ngFor="let responsibility of experience.responsibilities">{{ responsibility }}</li>
+        </ul>
+        <p><mat-icon>stars</mat-icon><strong> Key Achievements:</strong></p>
+        <ul>
+          <li *ngFor="let achievement of experience.achievements">{{ achievement }}</li>
+        </ul>
+      </div>
+    </div>
+  </mat-card>
+</div>

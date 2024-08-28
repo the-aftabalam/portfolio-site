@@ -1,0 +1,84 @@
+.about-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    background-color: #121212;
+    color: white;
+  }
+  
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  mat-divider {
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .about-highlights {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+  
+    .highlight-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  
+      mat-icon {
+        font-size: 48px;
+        color: #ff4081;
+        margin-bottom: 10px;
+      }
+  
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        font-size: 1.1rem;
+        color: #bbb;
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-highlights {
+      flex-direction: column;
+    }
+  
+    .highlight-item {
+      margin-bottom: 20px;
+    }
+  }
+  
