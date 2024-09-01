@@ -1,86 +1,136 @@
-.projects-container {
-  background-color: #121212;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 40px;
-}
-
-.project-card {
-  width: 100%;
-  max-width: 600px;
-  background: linear-gradient(145deg, #282c34, #3c4048);
-  color: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  overflow: hidden;
-
-  &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.6);
-    border-color: #ff4081;
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+@keyframes scaleUp {
+  from {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Container Styles */
+.projects-container {
+  background-color: #121212; /* Dark background */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three cards per row */
+  gap: 10px; /* Increase gap between cards */
+  padding: 40px;
+  justify-items: center; /* Center items horizontally */
+}
+
+/* Card Styles */
+.project-card {
+  width: 100%; /* Full width within the grid column */
+  max-width: 350px; /* Set a maximum width */
+  background: #1e1e1e; /* Dark background for cards */
+  color: #ffffff; /* White text for better readability */
+  border-radius: 16px; /* More rounded corners */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  animation: scaleUp 0.5s ease-out;
+}
+
+.project-card:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+}
+
+/* Card Content Styles */
 .card-content {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
-.top-section {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+/* Image Section Styles */
+.image-section {
+  width: 100%;
+  height: 180px; /* Larger image height */
+  overflow: hidden;
+  position: relative;
 }
 
 .project-image {
-  flex: 0 0 120px; /* Fixed width for the image */
-  margin-right: 20px;
-}
-
-.project-image img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the section */
+  transition: transform 0.3s ease;
 }
 
-.right-section {
-  flex: 1;
+.project-card:hover .project-image {
+  transform: scale(1.1); /* Zoom image on hover */
+}
+
+/* Content Section Styles */
+.content-section {
+  padding: 20px; /* Increased padding for a more spacious look */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: fadeIn 1s ease-out;
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 1.3rem; /* Larger font size for the title */
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  color: #ffffff; /* White color for title */
 }
 
 .tech-stack {
-  font-size: 0.9rem;
-  color: #bbb;
-  margin-bottom: 10px;
+  font-size: 0.85rem; /* Slightly larger font size for tech stack */
+  color: #bbbbbb; /* Lighter gray color for tech stack */
+  margin-bottom: 12px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .tech-stack span {
-  background-color: #333;
-  padding: 4px 8px;
-  border-radius: 4px;
-  margin-right: 4px;
+  background-color: #333333; /* Darker gray background */
+  padding: 5px 8px;
+  border-radius: 20px; /* Rounded tags */
+  margin-right: 6px;
+  margin-bottom: 6px;
+  color: #ffffff; /* White text for tags */
 }
 
-.details-section {
-  font-size: 0.95rem;
-  color: #ddd;
+.description {
+  font-size: 0.9rem; /* Slightly larger font size for description */
+  color: #dddddd; /* Lighter gray color for description */
+  margin-bottom: 15px;
+}
+
+/* Card Actions Styles */
+mat-card-actions {
+  display: flex;
+  justify-content: space-between;
   margin-top: 10px;
 }
 
-mat-card-actions {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+button {
+  font-size: 0.9rem; /* Slightly smaller font size for buttons */
+  color: #ffffff; /* White button text */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff4081; /* Accent color on hover */
+  transform: translateY(-2px);
 }

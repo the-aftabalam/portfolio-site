@@ -1,11 +1,20 @@
 <div class="home-container">
+   <!-- Resume Buttons -->
+   <section class="resume-buttons">
+    <button mat-raised-button color="accent" (click)="downloadResume()">
+      <mat-icon>download</mat-icon> Download Resume
+    </button>
+    <button mat-raised-button color="primary" (click)="viewResume()">
+      <mat-icon>visibility</mat-icon> View Resume
+    </button>
+  </section>
+  
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="hero-content">
-      <h1>Welcome to My Portfolio</h1>
-      <p>
-        I am a <span class="typing-text" #typingText></span>
-      </p>
+      <h1>Hi, I'm Aftab Alam</h1>
+      <p>A Full Stack Web Developer specializing in building high-quality, scalable web applications.</p>
+      <p>I am a <span class="typing-text" #typingText></span></p>
       <div class="cta-buttons">
         <button mat-raised-button color="primary" routerLink="/about">
           <mat-icon>info</mat-icon> Learn More About Me
@@ -19,30 +28,10 @@
 
   <!-- Highlights Section -->
   <section class="highlights-section">
-    <div class="highlight-item">
-      <mat-icon>code</mat-icon>
-      <h3>Skills</h3>
-      <p>Proficient in Java, Spring Boot, Angular, and more.</p>
+    <div class="highlight-item" *ngFor="let highlight of highlights">
+      <mat-icon>{{highlight.icon}}</mat-icon>
+      <h3>{{highlight.title}}</h3>
+      <p>{{highlight.content}}</p>
     </div>
-    <div class="highlight-item">
-      <mat-icon>work</mat-icon>
-      <h3>Experience</h3>
-      <p>Worked on various challenging projects in the last 2 years.</p>
-    </div>
-    <div class="highlight-item">
-      <mat-icon>emoji_events</mat-icon>
-      <h3>Achievements</h3>
-      <p>Recipient of the Rising Star Certificate from HostBooks.</p>
-    </div>
-  </section>
-
-  <!-- Resume Buttons -->
-  <section class="resume-buttons">
-    <button mat-raised-button color="accent" (click)="downloadResume()">
-      <mat-icon>download</mat-icon> Download Resume
-    </button>
-    <button mat-raised-button color="primary" (click)="viewResume()">
-      <mat-icon>visibility</mat-icon> View Resume
-    </button>
   </section>
 </div>

@@ -1,4 +1,4 @@
-<div class="about-container">
+<div class="about-container" [ngClass]="'animated-slideIn'">
     <section class="about-content">
       <div class="about-text">
         <h2>About Me</h2>
@@ -8,18 +8,18 @@
           and I have hands-on experience in frontend development with Angular.
         </p>
         <mat-divider></mat-divider>
-        <div class="about-highlights">
+        <div class="about-highlights" [ngClass]="'animated-fadeIn'">
           <div class="highlight-item">
             <mat-icon>school</mat-icon>
             <h3>Education</h3>
             <p>Bachelor's Degree in Computer Science</p>
           </div>
-          <div class="highlight-item">
+          <div class="highlight-item" [ngClass]="'animated-fadeIn'">
             <mat-icon>work_outline</mat-icon>
             <h3>Experience</h3>
             <p>2+ years in software development</p>
           </div>
-          <div class="highlight-item">
+          <div class="highlight-item" [ngClass]="'animated-fadeIn'">
             <mat-icon>star</mat-icon>
             <h3>Achievements</h3>
             <p>Rising Star Certificate from HostBooks</p>

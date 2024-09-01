@@ -48,11 +48,6 @@ mat-nav-list {
   width: 100%;
 }
 
-.content {
-  padding: 20px;
-  min-height: calc(80vh - 64px); /* Adjust content height relative to toolbar */
-}
-
 .footer {
   background-color: #121212; /* Dark footer background */
   color: white;

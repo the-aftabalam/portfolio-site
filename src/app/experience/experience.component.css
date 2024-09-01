@@ -1,23 +1,59 @@
+/* experience.component.css */
+
+/* Common animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .experience-container {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-  width: 100%; /* Ensure container takes full width */
+  margin: 20px auto;
+  width: 100%;
 }
 
 .experience-card {
   width: 100%;
-  max-width: 1200px; /* Optional: Max width to avoid overly wide cards */
+  max-width: 1000px; /* Standard max-width */
   padding: 20px;
   background: #1e1e1e; /* Dark background for the card */
   color: white;
   border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-  margin: 0 auto; /* Center card horizontally */
+  animation: fadeInUp 1s ease-out;
 
   &:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
     transform: translateY(-5px);
   }
 }
@@ -25,52 +61,55 @@
 .top-section {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin-bottom: 20px;
 }
 
 .left-section {
-  flex: 0 0 150px; /* Adjusted width for logo */
+  flex: 0 0 150px; /* Fixed width for logo container */
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin-right: 20px; /* Space between logo and details */
+  animation: fadeInLeft 1s ease-out;
 }
 
 .company-logo {
-  width: 200px; /* Increased size */
-  height: 100px; /* Increased size */
+  width: 150px; /* Standard size for logo */
+  height: auto;
   object-fit: contain;
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
 .right-section {
-  flex-grow: 1;
-  text-align: right;
+  flex: 1;
+  animation: fadeInRight 1s ease-out;
+}
 
-  .position-role {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
+.position-role {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
 
-  .team-name {
-    font-size: 1.2rem;
-    color: #ff4081; /* Accent color */
-    margin-bottom: 5px;
-  }
+.team-name {
+  font-size: 1.3rem;
+  color: #ff4081; /* Accent color */
+  margin-bottom: 5px;
+}
 
-  .date-range {
-    font-size: 1rem;
-    color: #666;
-  }
+.date-range {
+  font-size: 1.1rem;
+  color: #999;
 }
 
 .more-details {
   margin-top: 15px;
+  animation: fadeInUp 1s ease-out;
 
   p {
     display: flex;
     align-items: center;
-    font-size: 0.95rem;
+    font-size: 1rem;
     margin-bottom: 10px;
   }
 

@@ -25,8 +25,13 @@ export class ContactUsComponent implements OnInit {
     if (this.contactForm.valid) {
       // Handle form submission logic
       console.log('Form Submitted', this.contactForm.value);
-      // For example, send form data to a server
+      this.redirectToEmail();
+  
     }
+  }
+
+  redirectToEmail() {
+    window.location.href = 'mailto:aftabalamfd@gmail.com'; // Opens default email client
   }
 
 }

@@ -1,15 +1,16 @@
+<!-- experience.component.html -->
 <div class="experience-container">
   <mat-card class="experience-card">
     <div class="card-content">
       <!-- Top Section: Company logo and role/team/date in parallel -->
       <div class="top-section">
         <!-- Left section: Company logo -->
-        <div class="left-section">
+        <div class="left-section animate__animated animate__fadeInLeft">
           <img [src]="experience.logo" alt="Company Logo" class="company-logo">
         </div>
 
         <!-- Right section: Position, Team, and Date Range -->
-        <div class="right-section">
+        <div class="right-section animate__animated animate__fadeInRight">
           <div class="position-role">{{ experience.role }}</div>
           <div class="team-name">{{ experience.team }}</div>
           <div class="date-range">{{ experience.dateRange }}</div>
@@ -17,7 +18,7 @@
       </div>
 
       <!-- More details that reveal on hover -->
-      <div class="more-details">
+      <div class="more-details animate__animated animate__fadeInUp">
         <p><mat-icon>location_on</mat-icon><strong> Location:</strong> {{ experience.location }}</p>
         <p><mat-icon>tasks</mat-icon><strong> Key Responsibilities:</strong></p>
         <ul>

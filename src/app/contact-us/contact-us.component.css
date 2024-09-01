@@ -1,3 +1,45 @@
+/* Common Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Contact Us Container */
 .contact-us-container {
   display: flex;
   justify-content: center;
@@ -6,61 +48,100 @@
   padding: 16px;
   background-color: #121212; /* Dark background for contrast */
   color: white; /* White text color */
+  animation: fadeIn 2s ease-in-out;
+}
 
-  .contact-card {
-    max-width: 600px;
-    width: 100%;
-    background: linear-gradient(145deg, #1e1e1e, #282828); /* Dark gradient background */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Larger shadow for depth */
-    border-radius: 16px;
-    padding: 24px; /* Add padding inside the card for space */
-    color: white; /* Ensure text inside card is white */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Contact Card */
+.contact-card {
+  max-width: 700px; /* Standardized card width */
+  width: 100%;
+  background: linear-gradient(145deg, #1e1e1e, #282828); /* Dark gradient background */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Larger shadow for depth */
+  border-radius: 16px;
+  padding: 24px; /* Standardized padding inside the card */
+  color: white; /* Ensure text inside card is white */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1.5s ease-in-out; /* Animation for card */
+}
 
-    &:hover {
-      transform: translateY(-8px); /* Lift effect on hover */
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
-    }
+/* Card Header */
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px; /* Reduced spacing below header */
+}
+
+/* GitHub Link */
+.github-link {
+  display: flex;
+  align-items: center;
+}
+
+.github-logo {
+  width: 40px; /* Adjusted logo size */
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.github-link:hover .github-logo {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Card Title */
+.card-title {
+  text-align: center;
+  color: #ff4081; /* Accent color for heading */
+  margin-bottom: 16px; /* Reduced spacing below heading */
+  font-size: 2rem; /* Standardized font size */
+  animation: slideIn 1.5s ease-out; /* Animation for title */
+}
+
+/* Contact Info */
+.contact-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px; /* Increased spacing between contact details */
+  animation: fadeInUp 1.5s ease-in-out; /* Animation for contact info */
+}
+
+.contact-icon {
+  font-size: 2.5rem; /* Adjusted icon size */
+  color: #ff4081; /* Accent color for icons */
+  margin-right: 16px; /* Adjusted spacing between icon and text */
+}
+
+.contact-detail {
+  flex: 1;
+}
+
+.contact-detail h3 {
+  font-size: 1.4rem; /* Adjusted heading size */
+  margin-bottom: 4px; /* Reduced spacing below heading */
+}
+
+.contact-detail p {
+  font-size: 1rem; /* Adjusted text size */
+  margin: 0; /* Remove default margin */
+}
+
+/* Button Container */
+.button-container {
+  text-align: center;
+  margin-top: 24px; /* Adjusted margin above button */
+}
+
+button {
+  padding: 12px 24px; /* Adjusted button padding */
+  border-radius: 24px;
+  background-color: #ff4081; /* Accent button color */
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Subtle button shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    background-color: #e73370; /* Darken button on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Enhance shadow on hover */
   }
-
-  h2 {
-    text-align: center;
-    color: #ff4081; /* Accent color for heading */
-    margin-bottom: 24px; /* Spacing below heading */
-  }
-
-  mat-form-field {
-    width: 100%;
-    margin-bottom: 24px; /* Spacing between form fields */
-    .mat-form-field-underline {
-      background-color: #ff4081; /* Accent color for form field underline */
-    }
-    .mat-form-field-label {
-      color: #ff4081; /* Accent color for form field label */
-    }
-    input, textarea {
-      color: white; /* Ensure input text is white */
-    }
-  }
-
-  .button-container {
-    text-align: right;
-    margin-top: 24px;
-  }
-
-  button {
-    padding: 12px 24px;
-    border-radius: 24px;
-    background-color: #ff4081; /* Accent button color */
-    color: white;
-    font-weight: bold;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Subtle button shadow */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-
-    &:hover {
-      background-color: #e73370; /* Darken button on hover */
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5); /* Enhance shadow on hover */
-    }
-  }
-  
 }

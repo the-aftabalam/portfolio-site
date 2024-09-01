@@ -84,3 +84,66 @@ input, textarea {
 input:focus, textarea:focus {
   border-color: var(--primary-color);
 }
+
+/* animations.css */
+
+/* Slide In Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Bounce In Animation */
+@keyframes bounceIn {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply Animation Classes */
+.animated-slideIn {
+  animation: slideIn 1.5s ease-out;
+}
+
+.animated-bounceIn {
+  animation: bounceIn 2.5s ease-in-out;
+}
+
+.animated-fadeIn {
+  animation: fadeIn 2s ease-in-out;
+}
+
+.animated-fadeInUp {
+  animation: fadeInUp 1.5s ease-in-out;
+}
