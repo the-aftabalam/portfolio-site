@@ -14,7 +14,7 @@
         </div>
         <p class="description">{{ project.description }}</p>
         <mat-card-actions>
-          <button mat-raised-button color="primary" (click)="viewProject(project.link)">View</button>
+          <button mat-raised-button color="primary" *ngIf="project.title === 'Cricbuzz Clone'" (click)="viewProject(project.link)">View</button>
           <button mat-stroked-button color="accent" (click)="viewSourceCode(project.source)">Source Code</button>
         </mat-card-actions>
       </div>
